@@ -1,8 +1,12 @@
 {
     "posts": [
       {
-        "id": 1,
-        "title": "hello"
+        "login": "kirill",
+        "password": "qwe"
+      },
+      {
+        "login": "kirill",
+        "password": "qwe"
       }
     ],
     "profile": {
