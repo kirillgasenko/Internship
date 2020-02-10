@@ -1,14 +1,15 @@
 {
-    "posts": [
+    "users": [
       {
         "login": "kirill",
         "password": "qwe"
       },
       {
-        "login": "kirill",
-        "password": "qwe"
+        "login": "vlad",
+        "password": "debul"
       }
     ],
+    
     "profile": {
       "name": "typicode"
     }
