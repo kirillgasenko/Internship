@@ -1,0 +1,42 @@
+{
+    "users": [
+      {
+        "login": "kirill",
+        "password": "qwe"
+      },
+      {
+        "login": "vlad",
+        "password": "debul"
+      }
+    ],
+    "posts": [
+      {
+        "city": "Dnepr",
+        "country": "Ukraine",
+        "year": "2019",
+        "date": "20"
+      },
+      {
+        "city": "Moscow",
+        "country": "Ukraine",
+        "year": "2019",
+        "date": "20"
+      },
+      {
+        "city": "Minsk",
+        "country": "Ukraine",
+        "year": "2019",
+        "date": "20"
+      },
+      {
+        "city": "Kiev",
+        "country": "Ukraine",
+        "year": "2019",
+        "date": "20"
+      },
+    ],
+    
+    "profile": {
+      "name": "typicode"
+    }
+  }
