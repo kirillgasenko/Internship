@@ -76,26 +76,23 @@ Ext.define('form.view.main.MainController', {
     },
 
     delete(button){
-        // debugger
-        // const vm = this.getViewModel();
-        // var storage = vm.get('post');        
-       
-        // var somethingNew = vm.get('posts')
-        // somethingNew.remove(storage)
+
         
-
-
-
-        debugger
         const vm = this.getViewModel();
-        var storage = vm.get('post');        
-    
-        console.log(storage)
-        console.log(button.up().selection)
+        //var storage = vm.get('post');        
         var somethingNew = vm.get('posts')
-        console.log(somethingNew)
-        somethingNew.remove(button.up().selection) // с стора удаляется запись
+        debugger
+        var t = button.getWidgetRecord();
+        somethingNew.remove(t)
+        // console.log(button.lookupViewModel().get('posts').data.items)
+        // Ext.Array.each(button.lookupViewModel().get('posts').data.items, function(name, index, countriesItSelf) {
+            
+        //     if(name.id === button.up().mouseOverItem.dataset.recordid){
+        //         somethingNew.remove(this)
+                
+        //     }
 
+        // })
 
     },
     logout(){

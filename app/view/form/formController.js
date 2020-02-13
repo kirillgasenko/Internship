@@ -11,34 +11,38 @@ Ext.define('form.view.login.LoginController', {              //ЛОГИКА ОК
         // console.log(email)
         // debugger
         //ext.each
-        
+        var some = null;
         Ext.Array.each(button.lookupViewModel().get('user').data.items, function(name, index, countriesItSelf) {
-            login = button.lookupViewModel().getData().login
+            login = button.lookupViewModel().get('login')
+            console.log(name)
             password = button.lookupViewModel().getData().pas;
-            if(name.data.login === login && name.data.password === password){
-                debugger
-                user = {
+            debugger
+            if(name && name.data.login === login && name.data.password === password){
+                //debugger
+                some = {
                     log: login,
                     pas: password
                 }
 
-                userJ = JSON.stringify(user)
-                localStorage.setItem('user', userJ);
-
-            // Remove Login Window
-                //this.view.close();
-                button.up().up().up().destroy()
-                console.log(this)
-               
-                // Add the main view to the viewport
-                Ext.widget('app-main');             //переадрисация на нужную страницу
             } 
-             else {
-                button.up().up().down('label').setHidden(false)
-            }
+             
         });
-        
+        if(some){
 
+        
+        userJ = JSON.stringify(some)
+        localStorage.setItem('user', userJ);
+
+
+        button.up().up().up().destroy()
+        console.log(this)
+       
+
+        Ext.widget('app-main');             //переадрисация на нужную страни
+        }
+        else {
+            button.up().up().down('label').setHidden(false)
+        }
 
         // for(var i = 0; i< button.lookupViewModel().get('user').data.items.length; i++){
         

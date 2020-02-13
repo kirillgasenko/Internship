@@ -1,4 +1,4 @@
-Ext.define('form.view.login.Login', {                    //ОКНО ВХОДА
+Ext.define('form.view.login.Login', {                    
     extend: 'Ext.window.Window',
     xtype: 'login',
 
@@ -56,11 +56,11 @@ Ext.define('form.view.login.Login', {                    //ОКНО ВХОДА
             reference: 'red'
         }
         ],
-        buttons: [{                                             //создание кнопки
+        buttons: [{                                           
             text: 'Enter',
-            formBind: true,                                      //кнопка будет не активной до тех пор пока все поля не будут заполнены
+            formBind: true,                                     
             submit: 'onSubmit',
-            listeners: {                                         //события по нажатию на кнопку, после этог будет переадрисация
+            listeners: {                                     
                 click: 'onLoginClick',
             }
         }]
