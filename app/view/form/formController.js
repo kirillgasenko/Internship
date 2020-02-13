@@ -4,21 +4,12 @@ Ext.define('form.view.login.LoginController', {              //ЛОГИКА ОК
     
 
     onLoginClick: function(button) {                                      //по сути проверка на правильность входа 
-        // qwe = button.lookupViewModel().get('user').data.items
-        // console.log(qwe)
-        // qwe.forEach(console.log(1))
-        // var email = this.lookupReference('name')
-        // console.log(email)
-        // debugger
-        //ext.each
         var some = null;
         Ext.Array.each(button.lookupViewModel().get('user').data.items, function(name, index, countriesItSelf) {
             login = button.lookupViewModel().get('login')
             console.log(name)
             password = button.lookupViewModel().getData().pas;
-            debugger
             if(name && name.data.login === login && name.data.password === password){
-                //debugger
                 some = {
                     log: login,
                     pas: password
@@ -52,7 +43,7 @@ Ext.define('form.view.login.LoginController', {              //ЛОГИКА ОК
         //     password = button.lookupViewModel().getData().pas;
         //     console.log(login)
         //     console.log(password)
-        //     // debugger
+
         //     if(some.data.login === login && some.data.password === password){
                 
         //         user = {

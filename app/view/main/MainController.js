@@ -17,7 +17,6 @@ Ext.define('form.view.main.MainController', {
         }
     },
     hello(button){
-        debugger
         name = 
         q = JSON.parse(localStorage.getItem('user'))
         console.log(q.log)
@@ -30,43 +29,33 @@ Ext.define('form.view.main.MainController', {
               parent: this.getViewModel() // привязка в нужному окну груббо гоовря  // не перезаписывает обьект а добавляет
             },
           });
-          debugger
 
     newField.show();
         
     },
     edit(record, element, rowIndex, e, eOpts){
-        debugger
-        var newRecord = record.lookupViewModel().get('post').data
-        console.log(newRecord)
+        var myData = record.getWidgetRecord();
         var newField = Ext.create({
             xtype: 'edit',
             viewModel: {
               parent: this.getViewModel(), // привязка в нужному окну груббо гоовря  // не перезаписывает обьект а добавляет
               data: {
-                kirill: newRecord,
+                kirill: myData,
             },
             },
           });
-          debugger
 
     newField.show();
         
     },
 
     profile(record, element, rowIndex, e, eOpts){
-        // var l = btn.up().down('label');
-        // l.setHidden(false)
-        // var p = btn.up().down('label').nextSibling();
-        // p.setHidden(false)
-       // var t = element.getData()
         var newField = Ext.create({
             xtype: 'profile',
             viewModel: {
               parent: this.getViewModel() // привязка в нужному окну груббо гоовря  // не перезаписывает обьект а добавляет
             },
           });
-          debugger
           var name = this.lookupReference('name');
           var pas = this.lookupReference('password');
           var some = record.lookupViewModel().data.qwe
@@ -77,11 +66,8 @@ Ext.define('form.view.main.MainController', {
 
     delete(button){
 
-        
-        const vm = this.getViewModel();
-        //var storage = vm.get('post');        
+        const vm = this.getViewModel();       
         var somethingNew = vm.get('posts')
-        debugger
         var t = button.getWidgetRecord();
         somethingNew.remove(t)
         // console.log(button.lookupViewModel().get('posts').data.items)
