@@ -55,7 +55,6 @@ Ext.define('form.view.main.Main', {
         },
         {
             xtype: 'button',
-            fieldLabel: 'qwe',
             reference: 'name',
             bind:{
                 text: '{qwe.log}'

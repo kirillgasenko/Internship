@@ -70,16 +70,6 @@ Ext.define('form.view.main.MainController', {
         var somethingNew = vm.get('posts')
         var t = button.getWidgetRecord();
         somethingNew.remove(t)
-        // console.log(button.lookupViewModel().get('posts').data.items)
-        // Ext.Array.each(button.lookupViewModel().get('posts').data.items, function(name, index, countriesItSelf) {
-            
-        //     if(name.id === button.up().mouseOverItem.dataset.recordid){
-        //         somethingNew.remove(this)
-                
-        //     }
-
-        // })
-
     },
     logout(){
         this.getView().destroy();
